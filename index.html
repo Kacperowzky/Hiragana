@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Nauka Hiragany</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🔥 Nauka Hiragany</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Start</button>
+    <button onclick="showSection('learn')">Nauka</button>
+    <button onclick="showSection('quiz')">Quiz</button>
+    <button onclick="showSection('stats')">Statystyki</button>
+</nav>
+
+<section id="home" class="section active">
+    <div class="card">
+        <h2>Siema 👋</h2>
+        <p>Masz do ogarnięcia 46 znaków hiragany.</p>
+        <p>Kliknij "Nauka", żeby zacząć.</p>
+    </div>
+</section>
+
+<section id="learn" class="section">
+    <div class="card">
+        <div id="learnChar" class="hiragana"></div>
+        <p id="learnRomaji"></p>
+        <button onclick="nextChar()">Następny znak</button>
+    </div>
+</section>
+
+<section id="quiz" class="section">
+    <div class="card">
+        <div id="quizChar" class="hiragana"></div>
+        <input type="text" id="answer" placeholder="Wpisz romaji">
+        <br><br>
+        <button onclick="checkAnswer()">Sprawdź</button>
+        <p id="result"></p>
+
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+    </div>
+</section>
+
+<section id="stats" class="section">
+    <div class="card">
+        <h3>Twój progres</h3>
+        <p id="scoreText"></p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
