@@ -2,28 +2,31 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Nauka Hiragany</title>
+    <title>Hiragana Master</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>🔥 Nauka Hiragany</h1>
+    <h1>🔥 Hiragana Master</h1>
+    <div id="levelInfo"></div>
 </header>
 
 <nav>
     <button onclick="showSection('home')">Start</button>
     <button onclick="showSection('learn')">Nauka</button>
     <button onclick="showSection('quiz')">Quiz</button>
+    <button onclick="showSection('review')">Trudne</button>
     <button onclick="showSection('stats')">Statystyki</button>
 </nav>
 
 <section id="home" class="section active">
     <div class="card">
-        <h2>Siema 👋</h2>
-        <p>Masz do ogarnięcia 46 znaków hiragany.</p>
-        <p>Kliknij "Nauka", żeby zacząć.</p>
+        <h2>Twoja misja 🎌</h2>
+        <p>Opanuj wszystkie 46 znaków hiragany.</p>
+        <div class="exp-bar"><div id="expFill"></div></div>
+        <p id="expText"></p>
     </div>
 </section>
 
@@ -31,7 +34,7 @@
     <div class="card">
         <div id="learnChar" class="hiragana"></div>
         <p id="learnRomaji"></p>
-        <button onclick="nextChar()">Następny znak</button>
+        <button onclick="nextChar()">Następny</button>
     </div>
 </section>
 
@@ -42,17 +45,22 @@
         <br><br>
         <button onclick="checkAnswer()">Sprawdź</button>
         <p id="result"></p>
+    </div>
+</section>
 
-        <div class="progress-bar">
-            <div id="progress"></div>
-        </div>
+<section id="review" class="section">
+    <div class="card">
+        <h3>Znaki do powtórki</h3>
+        <div id="reviewList"></div>
     </div>
 </section>
 
 <section id="stats" class="section">
     <div class="card">
-        <h3>Twój progres</h3>
-        <p id="scoreText"></p>
+        <h3>Statystyki</h3>
+        <p id="statsText"></p>
+        <p id="streakText"></p>
+        <button onclick="resetProgress()">Reset</button>
     </div>
 </section>
 
