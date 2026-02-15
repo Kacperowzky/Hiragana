@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #fcefee, #e3f2fd);
+    background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
     color: #333;
 }
 
@@ -15,32 +15,30 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin: 20px;
+    gap: 10px;
     flex-wrap: wrap;
+    padding: 15px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 8px 15px;
     border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 16px;
+    border-radius: 10px;
     background: #4dabf7;
     color: white;
-    transition: 0.3s;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover {
     transform: scale(1.05);
-    background: #339af0;
 }
 
 .section {
     display: none;
-    padding: 20px;
     max-width: 800px;
     margin: auto;
+    padding: 20px;
 }
 
 .section.active {
@@ -52,31 +50,30 @@ button:hover {
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .hiragana {
-    font-size: 90px;
+    font-size: 100px;
     margin: 20px 0;
 }
 
 input {
     padding: 10px;
     font-size: 18px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    width: 200px;
 }
 
-.progress-bar {
-    margin-top: 20px;
+.exp-bar {
     height: 20px;
     background: #ddd;
     border-radius: 10px;
     overflow: hidden;
+    margin-top: 15px;
 }
 
-#progress {
+#expFill {
     height: 100%;
     width: 0%;
     background: #51cf66;
